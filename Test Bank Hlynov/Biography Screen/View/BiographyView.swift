@@ -12,6 +12,8 @@ final class BiographyView: SearchView {
     }
 
     private func setupView() {
-        titleLabel.text = NSLocalizedString("Биография", comment: "")
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 0.85
+        titleLabel.attributedText = NSMutableAttributedString(string: NSLocalizedString("Биография", comment: ""), attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
 }

@@ -43,7 +43,7 @@ final class TrackView: UIView {
         self.titleTextView.snp.makeConstraints { make in
             make.leading.equalTo(imageView.snp.trailing).inset(-24)
             make.top.equalToSuperview()
-            make.trailing.equalToSuperview()
+            make.width.equalTo(184)
             make.bottom.equalToSuperview()
         }
     }

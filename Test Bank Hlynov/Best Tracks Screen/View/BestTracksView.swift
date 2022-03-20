@@ -12,6 +12,8 @@ final class BestTracksView: SearchView {
     }
 
     private func setupView() {
-        titleLabel.text = NSLocalizedString("Лучшие треки", comment: "")
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 0.85
+        titleLabel.attributedText = NSMutableAttributedString(string: NSLocalizedString("Лучшие треки", comment: ""), attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
 }

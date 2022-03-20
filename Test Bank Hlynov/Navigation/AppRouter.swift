@@ -19,7 +19,10 @@ final class AppRouter {
     }
 
     public func showMainScreen(with window: UIWindow?) {
-        let initialViewController = MainScreenViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainScreen") as? MainScreenViewController else {
+            fatalError("Unable to Instantiate Main Screen View Controller")
+        }
         initialViewController.networkManager = self.networkManager
         self.rootViewController = initialViewController
         guard let rootViewController = self.rootViewController else {

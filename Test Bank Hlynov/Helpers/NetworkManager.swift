@@ -12,6 +12,9 @@ enum APIRequestsMethods {
 }
 
 class NetworkManager {
+    
+    let artistNameFormatter = ArtistNameFormatter()
+    
     func getData(with url: URL, completion: @escaping (Data?) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -33,10 +36,11 @@ class NetworkManager {
     }
 
     func getInfo(about artist: String, artistInfoFetchedCompletionHandler: @escaping (Artist?) -> Void) {
-        let artistName = artist.URLEncoded
+        let artistName = artistNameFormatter.formatName(of: artist)
         let urlString = API.rootURL + "?" + APIRequestsMethods.getArtistInfo
-            + "&artist=" + artistName + "&api_key=" + API.apiKey + "&format=json" + "&lang=ru"
+            + "&artist=" + artistName + "&api_key=" + API.apiKey + "&format=json" + "&lang=ru" + "&autocorrect=1"
         guard let url = URL(string: urlString) else {
+            artistInfoFetchedCompletionHandler(nil)
             return
         }
         self.getData(with: url) { [self] data in
@@ -66,9 +70,9 @@ class NetworkManager {
     }
 
     func getTopTracks(of artist: String, topTracksFetchedCompletionHandler: @escaping ([Track]?) -> Void) {
-        let artistName = artist.URLEncoded
+        let artistName = artistNameFormatter.formatName(of: artist)
         let urlString = API.rootURL + "?" + APIRequestsMethods.getTopTrack
-            + "&artist=" + artistName + "&api_key=" + API.apiKey + "&format=json"
+            + "&artist=" + artistName + "&api_key=" + API.apiKey + "&format=json" + "&autocorrect=1"
         guard let url = URL(string: urlString) else { return }
         self.getData(with: url) { [self] data in
             guard let data = data else {
@@ -94,10 +98,16 @@ class NetworkManager {
         }
     }
 
-    func downloadImage(from url: URL, completion: @escaping (UIImage) -> Void) {
+    func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
         self.getImageData(from: url) { data, _, error in
-            guard let data = data, error == nil else { return }
-            guard let image = UIImage(data: data) else { return }
+            guard let data = data, error == nil else {
+                completion(nil)
+                return
+            }
+            guard let image = UIImage(data: data) else {
+                completion(nil)
+                return
+            }
             completion(image)
         }
     }

@@ -63,14 +63,14 @@ final class InfoView: ResponseView {
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.top.equalTo(imageView.snp.bottomMargin).inset(-25)
-            make.height.equalTo(30)
+            make.height.equalTo(29)
         }
 
         self.infoTextView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.top.equalTo(titleLabel.snp.bottomMargin).inset(-25)
-            make.bottom.equalToSuperview()
+            make.height.equalTo(200)
         }
     }
 
@@ -78,4 +78,5 @@ final class InfoView: ResponseView {
         self.infoTextView.font = UIFont(name: "Roboto-Regular", size: 16)
         self.titleLabel.font = UIFont(name: "Roboto-Bold", size: 26)
     }
+    
 }

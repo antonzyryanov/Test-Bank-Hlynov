@@ -1,6 +1,9 @@
 import UIKit
 
 class SearchView: UIView {
+    
+    let scrollView = UIScrollView()
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = ""
@@ -59,45 +62,54 @@ class SearchView: UIView {
 
     private func setupView(goBackButtonAction: @escaping () -> Void) {
         backgroundColor = .white
-
-        addSubview(self.titleLabel)
+        
+        addSubview(self.scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        scrollView.addSubview(self.titleLabel)
         self.titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(71)
             make.leading.equalToSuperview().inset(36)
             make.trailing.equalToSuperview().inset(36)
+            make.height.equalTo(29)
         }
 
-        addSubview(self.searchButton)
+        scrollView.addSubview(self.searchButton)
         self.searchButton.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(209)
-            make.leading.equalToSuperview().inset(102)
-            make.trailing.equalToSuperview().inset(102)
+            make.leading.equalTo(self).inset(102)
+            make.trailing.equalTo(self).inset(102)
             make.height.equalTo(55)
         }
 
-        addSubview(self.goBackButton)
+        scrollView.addSubview(self.searchBarView)
+        self.searchBarView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottomMargin).inset(-57)
+            make.leading.equalTo(self).inset(36)
+            make.trailing.equalTo(self).inset(36)
+            make.height.equalTo(28)
+        }
+
+        scrollView.addSubview(self.responseView)
+        self.responseView.snp.makeConstraints { make in
+            make.top.equalTo(searchButton.snp.bottomMargin).inset(-32)
+            make.height.equalTo(415)
+            make.leading.equalTo(self).inset(36)
+            make.trailing.equalTo(self).inset(36.0)
+        }
+        
+        scrollView.addSubview(self.goBackButton)
         self.goBackButton.snp.makeConstraints { make in
+            make.top.equalTo(self.responseView.snp.bottom).inset(-60)
             make.bottom.equalToSuperview().inset(29)
             make.centerX.equalToSuperview()
             make.height.equalTo(55)
         }
         self.goBackButton.addAction(goBackButtonAction)
-
-        addSubview(self.searchBarView)
-        self.searchBarView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(157)
-            make.leading.equalToSuperview().inset(36)
-            make.trailing.equalToSuperview().inset(36)
-            make.height.equalTo(28)
-        }
-
-        addSubview(self.responseView)
-        self.responseView.snp.makeConstraints { make in
-            make.top.equalTo(searchButton.snp.bottomMargin).inset(-32)
-            make.bottom.equalTo(goBackButton.snp.topMargin).inset(-10)
-            make.leading.equalTo(36.0)
-            make.trailing.equalTo(-36.0)
-        }
 
         addSubview(self.splashView)
         self.splashView.snp.makeConstraints { make in
@@ -128,5 +140,7 @@ class SearchView: UIView {
 
         self.goBackButton.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 16)
         self.goBackButton.underline()
+        
     }
+    
 }

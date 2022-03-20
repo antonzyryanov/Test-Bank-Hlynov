@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainScreen" id="BYZ-38-t0r" customClass="MainScreenViewController" customModule="Test_Bank_Hlynov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-x9-7sU">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49U-YG-XIY" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pac-N9-7AP">
+                                                <rect key="frame" x="36" y="71" width="342" height="58"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="BVS-pQ-DeD"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Поиск музыкальных исполнителей">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="29" name="Times-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.84999999999999998" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E44-lm-Oua" userLabel="divider">
+                                                <rect key="frame" x="36" y="150" width="342" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="9PT-jM-yO2"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVx-HA-oYn">
+                                                <rect key="frame" x="37" y="172" width="286" height="57"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="286" id="1bG-7J-Bz2"/>
+                                                    <constraint firstAttribute="height" constant="57" id="Ni9-SE-bBa"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Сервис позволяет найти лучшие треки исполнителей и показывает биографию.">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="16"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.01" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-Yx-sWf">
+                                                <rect key="frame" x="-74" y="236" width="562" height="355"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="562" id="4Nb-MT-Urs"/>
+                                                    <constraint firstAttribute="height" constant="355" id="PTc-vP-BYG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmk-Se-Yae" customClass="StoryBoardGradientButton" customModule="Test_Bank_Hlynov" customModuleProvider="target">
+                                                <rect key="frame" x="36" y="591" width="342" height="55"/>
+                                                <color key="backgroundColor" red="0.91788905860000003" green="0.76689487700000003" blue="0.90970307589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="HU5-q9-GyY"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Биография артиста">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                        <color key="value" red="0.98431372549019602" green="0.76078431372549016" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                        <color key="value" red="0.65098039215686276" green="0.75686274509803919" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="biographyOfArtistButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lot-Nn-yYf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aof-cg-pR6" customClass="StoryBoardGradientButton" customModule="Test_Bank_Hlynov" customModuleProvider="target">
+                                                <rect key="frame" x="36" y="667" width="342" height="55"/>
+                                                <color key="backgroundColor" red="0.91788905860000003" green="0.76689487700000003" blue="0.90970307589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="z1l-if-oDy"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Лучшие треки">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                        <color key="value" red="0.94117647058823528" green="0.57647058823529407" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                        <color key="value" red="0.96078431372549022" green="0.3411764705882353" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="bestTracksButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m05-tc-ROb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Pac-N9-7AP" firstAttribute="leading" secondItem="E44-lm-Oua" secondAttribute="leading" id="0Ia-0c-gII"/>
+                                            <constraint firstItem="qmk-Se-Yae" firstAttribute="leading" secondItem="49U-YG-XIY" secondAttribute="leading" constant="36" id="6hw-HX-NdQ"/>
+                                            <constraint firstAttribute="height" constant="700" id="B5t-My-vVa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pac-N9-7AP" secondAttribute="trailing" constant="36" id="C2H-sh-naB"/>
+                                            <constraint firstItem="DdT-Yx-sWf" firstAttribute="top" secondItem="nVx-HA-oYn" secondAttribute="bottom" constant="7" id="DNk-RG-hTt"/>
+                                            <constraint firstItem="Pac-N9-7AP" firstAttribute="trailing" secondItem="E44-lm-Oua" secondAttribute="trailing" id="Foc-My-k4E"/>
+                                            <constraint firstAttribute="trailing" secondItem="qmk-Se-Yae" secondAttribute="trailing" constant="36" id="NDa-kv-MBd"/>
+                                            <constraint firstItem="Pac-N9-7AP" firstAttribute="leading" secondItem="49U-YG-XIY" secondAttribute="leading" constant="36" id="UZE-ka-Y7U"/>
+                                            <constraint firstItem="Pac-N9-7AP" firstAttribute="top" secondItem="49U-YG-XIY" secondAttribute="top" constant="71" id="bMW-Sp-pbW"/>
+                                            <constraint firstItem="nVx-HA-oYn" firstAttribute="leading" secondItem="49U-YG-XIY" secondAttribute="leading" constant="37" id="djI-d1-Rg0"/>
+                                            <constraint firstItem="DdT-Yx-sWf" firstAttribute="centerX" secondItem="49U-YG-XIY" secondAttribute="centerX" id="fYe-FU-sUy"/>
+                                            <constraint firstItem="Pac-N9-7AP" firstAttribute="leading" secondItem="aof-cg-pR6" secondAttribute="leading" id="nlo-dp-4tK"/>
+                                            <constraint firstItem="E44-lm-Oua" firstAttribute="top" secondItem="Pac-N9-7AP" secondAttribute="bottom" constant="21" id="qd1-FL-KqZ"/>
+                                            <constraint firstItem="nVx-HA-oYn" firstAttribute="top" secondItem="E44-lm-Oua" secondAttribute="bottom" constant="21" id="sel-tT-fZm"/>
+                                            <constraint firstItem="aof-cg-pR6" firstAttribute="top" secondItem="qmk-Se-Yae" secondAttribute="bottom" constant="21" id="sjh-Hr-YWr"/>
+                                            <constraint firstItem="qmk-Se-Yae" firstAttribute="top" secondItem="DdT-Yx-sWf" secondAttribute="bottom" id="wae-2K-ab1"/>
+                                            <constraint firstItem="Pac-N9-7AP" firstAttribute="trailing" secondItem="aof-cg-pR6" secondAttribute="trailing" id="zEg-LL-iTO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="49U-YG-XIY" firstAttribute="centerX" secondItem="Tdh-x9-7sU" secondAttribute="centerX" id="1O8-5B-Ips"/>
+                                    <constraint firstAttribute="bottom" secondItem="49U-YG-XIY" secondAttribute="bottom" constant="121" id="C2f-2p-HOx"/>
+                                    <constraint firstAttribute="trailing" secondItem="49U-YG-XIY" secondAttribute="trailing" id="Xvp-OS-eZN"/>
+                                    <constraint firstItem="49U-YG-XIY" firstAttribute="top" secondItem="EAe-Ga-q6F" secondAttribute="top" id="fII-9h-iHE"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="EAe-Ga-q6F"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="sga-ay-YIL"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="1000"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tdh-x9-7sU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1ap-RK-UpY"/>
+                            <constraint firstItem="49U-YG-XIY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="5Ln-ic-tAU"/>
+                            <constraint firstItem="Tdh-x9-7sU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="AUp-iM-L3k"/>
+                            <constraint firstItem="Tdh-x9-7sU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aoi-l8-OKR"/>
+                            <constraint firstItem="Tdh-x9-7sU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yMB-2e-gBc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bestTracksButton" destination="aof-cg-pR6" id="6Ed-2L-R8k"/>
+                        <outlet property="biographyOfArtistButton" destination="qmk-Se-Yae" id="Mmw-Bp-Vuo"/>
+                        <outlet property="searchOfMusiciansLabel" destination="Pac-N9-7AP" id="7SD-gf-Itk"/>
+                        <outlet property="serviceDescription" destination="nVx-HA-oYn" id="6tF-4x-oxA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="77"/>
+        </scene>
+        <!--Biography View Controller-->
+        <scene sceneID="OeI-AF-dof">
+            <objects>
+                <viewController id="iQE-cb-XzG" customClass="BiographyViewController" customModule="Test_Bank_Hlynov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eho-ei-TfS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0Z-NH-PLZ">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-d8-2Yq" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="-27" width="414" height="950"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-JP-Q5q">
+                                                <rect key="frame" x="36" y="71" width="146" height="35"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Биография">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="29"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-RY-eO4" userLabel="searchView">
+                                                <rect key="frame" x="36" y="163" width="342" height="28"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search-interface-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="ias-1Y-3Kq">
+                                                        <rect key="frame" x="0.0" y="4" width="11" height="11"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="11" id="Mv8-gS-q80"/>
+                                                            <constraint firstAttribute="height" constant="11" id="jcd-5I-Cei"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baS-Hg-6S3" userLabel="divider">
+                                                        <rect key="frame" x="0.0" y="27" width="342" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="ktq-gl-EIM"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Кого ищем?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aa5-Tl-ceF">
+                                                        <rect key="frame" x="20" y="0.0" width="322" height="19"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="19" id="fmi-Kp-h2P"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="baS-Hg-6S3" secondAttribute="bottom" id="3QS-OY-K1K"/>
+                                                    <constraint firstAttribute="height" constant="28" id="55h-sg-GcY"/>
+                                                    <constraint firstItem="ias-1Y-3Kq" firstAttribute="top" secondItem="ytL-RY-eO4" secondAttribute="top" constant="4" id="6ay-Ng-1Xz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="baS-Hg-6S3" secondAttribute="trailing" id="7lP-tV-VYu"/>
+                                                    <constraint firstItem="aa5-Tl-ceF" firstAttribute="top" secondItem="ytL-RY-eO4" secondAttribute="top" id="CtF-FG-amq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aa5-Tl-ceF" secondAttribute="trailing" id="eTz-Tq-rPy"/>
+                                                    <constraint firstItem="baS-Hg-6S3" firstAttribute="leading" secondItem="ytL-RY-eO4" secondAttribute="leading" id="l5j-pX-b5Z"/>
+                                                    <constraint firstItem="ias-1Y-3Kq" firstAttribute="leading" secondItem="ytL-RY-eO4" secondAttribute="leading" id="okK-3d-uKi"/>
+                                                    <constraint firstItem="aa5-Tl-ceF" firstAttribute="leading" secondItem="ias-1Y-3Kq" secondAttribute="trailing" constant="9" id="vRT-KK-aCU"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvk-Hm-KZX">
+                                                <rect key="frame" x="102" y="216" width="210" height="55"/>
+                                                <color key="backgroundColor" red="0.9178832173" green="0.76695114369999995" blue="0.9057839513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="N8V-pk-8HZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Искать">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPT-s2-A3N" userLabel="BiographyView">
+                                                <rect key="frame" x="36" y="318" width="342" height="365"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A7z-e5-C9z" userLabel="biographyImageView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="185"/>
+                                                        <color key="backgroundColor" red="0.9178832173" green="0.76695114369999995" blue="0.9057839513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="185" id="KLp-9W-Ncq"/>
+                                                            <constraint firstAttribute="height" constant="185" id="OAf-xQ-9lX"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv0-0b-4Ks">
+                                                        <rect key="frame" x="0.0" y="210" width="209" height="19"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="19" id="wqA-MR-DPO"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Имя исполнителя">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="26"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8km-Jz-eFj">
+                                                        <rect key="frame" x="0.0" y="243" width="342" height="122"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Биография исполнителя">
+                                                                <attributes>
+                                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                                    <font key="NSFont" metaFont="system" size="16"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="365" id="AUP-bP-lSC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="A7z-e5-C9z" secondAttribute="trailing" id="END-1z-i1B"/>
+                                                    <constraint firstItem="A7z-e5-C9z" firstAttribute="top" secondItem="HPT-s2-A3N" secondAttribute="top" id="MTr-qU-fP7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8km-Jz-eFj" secondAttribute="bottom" id="Plk-by-snT"/>
+                                                    <constraint firstItem="Uv0-0b-4Ks" firstAttribute="top" secondItem="A7z-e5-C9z" secondAttribute="bottom" constant="25" id="ZoP-8c-tmg"/>
+                                                    <constraint firstItem="8km-Jz-eFj" firstAttribute="top" secondItem="Uv0-0b-4Ks" secondAttribute="bottom" constant="14" id="aAJ-iR-o1r"/>
+                                                    <constraint firstItem="8km-Jz-eFj" firstAttribute="top" secondItem="Uv0-0b-4Ks" secondAttribute="bottom" constant="14" id="bfZ-Cf-rSo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8km-Jz-eFj" secondAttribute="trailing" id="dYK-dc-n6O"/>
+                                                    <constraint firstItem="8km-Jz-eFj" firstAttribute="leading" secondItem="HPT-s2-A3N" secondAttribute="leading" id="nI5-mm-1T6"/>
+                                                    <constraint firstItem="Uv0-0b-4Ks" firstAttribute="leading" secondItem="HPT-s2-A3N" secondAttribute="leading" id="t4l-P7-BIV"/>
+                                                    <constraint firstItem="A7z-e5-C9z" firstAttribute="leading" secondItem="HPT-s2-A3N" secondAttribute="leading" id="wnN-yN-exZ"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyv-Zk-Qd2">
+                                                <rect key="frame" x="131.5" y="831.5" width="151.5" height="32.5"/>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Вернуться назад">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="wvk-Hm-KZX" firstAttribute="leading" secondItem="8iM-d8-2Yq" secondAttribute="leading" constant="102" id="48l-h5-96y"/>
+                                            <constraint firstAttribute="height" constant="950" id="4F0-xM-OeO"/>
+                                            <constraint firstAttribute="trailing" secondItem="HPT-s2-A3N" secondAttribute="trailing" constant="36" id="8NB-xu-Y5A"/>
+                                            <constraint firstItem="HPT-s2-A3N" firstAttribute="leading" secondItem="8iM-d8-2Yq" secondAttribute="leading" constant="36" id="8lT-Uj-7iP"/>
+                                            <constraint firstItem="ytL-RY-eO4" firstAttribute="top" secondItem="UJk-JP-Q5q" secondAttribute="bottom" constant="57" id="9Qt-oY-4IA"/>
+                                            <constraint firstItem="ytL-RY-eO4" firstAttribute="leading" secondItem="8iM-d8-2Yq" secondAttribute="leading" constant="36" id="AbR-KY-g3y"/>
+                                            <constraint firstAttribute="trailing" secondItem="wvk-Hm-KZX" secondAttribute="trailing" constant="102" id="BIc-dq-Zoc"/>
+                                            <constraint firstItem="HPT-s2-A3N" firstAttribute="top" secondItem="wvk-Hm-KZX" secondAttribute="bottom" constant="47" id="D8D-sg-CZq"/>
+                                            <constraint firstItem="wvk-Hm-KZX" firstAttribute="top" secondItem="ytL-RY-eO4" secondAttribute="bottom" constant="25" id="KYl-s7-Bbo"/>
+                                            <constraint firstAttribute="bottom" secondItem="gyv-Zk-Qd2" secondAttribute="bottom" constant="86" id="VKf-jX-6To"/>
+                                            <constraint firstItem="gyv-Zk-Qd2" firstAttribute="centerX" secondItem="8iM-d8-2Yq" secondAttribute="centerX" id="b5x-8f-rIE"/>
+                                            <constraint firstAttribute="trailing" secondItem="ytL-RY-eO4" secondAttribute="trailing" constant="36" id="goC-7E-VDh"/>
+                                            <constraint firstItem="UJk-JP-Q5q" firstAttribute="top" secondItem="8iM-d8-2Yq" secondAttribute="top" constant="71" id="kvT-cC-a2H"/>
+                                            <constraint firstItem="UJk-JP-Q5q" firstAttribute="leading" secondItem="8iM-d8-2Yq" secondAttribute="leading" constant="36" id="vF9-3C-tVF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8iM-d8-2Yq" secondAttribute="bottom" id="1W8-Rd-PFi"/>
+                                    <constraint firstAttribute="trailing" secondItem="8iM-d8-2Yq" secondAttribute="trailing" id="UGh-6K-rcv"/>
+                                    <constraint firstItem="8iM-d8-2Yq" firstAttribute="leading" secondItem="V0Z-NH-PLZ" secondAttribute="leading" id="enW-f5-eZr"/>
+                                    <constraint firstItem="8iM-d8-2Yq" firstAttribute="centerY" secondItem="V0Z-NH-PLZ" secondAttribute="centerY" id="qGm-np-L9R"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QKf-yY-PeG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5wj-ZA-Zaf"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CPY-rX-A2q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V0Z-NH-PLZ" firstAttribute="centerY" secondItem="CPY-rX-A2q" secondAttribute="centerY" id="0O6-mi-Kza"/>
+                            <constraint firstItem="V0Z-NH-PLZ" firstAttribute="centerX" secondItem="CPY-rX-A2q" secondAttribute="centerX" id="9An-y2-2xl"/>
+                            <constraint firstItem="8iM-d8-2Yq" firstAttribute="width" secondItem="eho-ei-TfS" secondAttribute="width" id="gWN-PO-aoP"/>
+                            <constraint firstItem="CPY-rX-A2q" firstAttribute="top" secondItem="V0Z-NH-PLZ" secondAttribute="top" constant="39" id="nds-og-uEr"/>
+                            <constraint firstItem="V0Z-NH-PLZ" firstAttribute="width" secondItem="eho-ei-TfS" secondAttribute="width" id="sRd-eb-K72"/>
+                            <constraint firstItem="V0Z-NH-PLZ" firstAttribute="height" secondItem="eho-ei-TfS" secondAttribute="height" id="z9D-eW-7qZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f6O-rh-5bC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6i-u5-EdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192.753623188406" y="-166.07142857142856"/>
+        </scene>
+        <!--Best Tracks View Controller-->
+        <scene sceneID="PrV-NL-wht">
+            <objects>
+                <viewController id="bCk-9E-Ghf" customClass="BestTracksViewController" customModule="Test_Bank_Hlynov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OEF-WK-PvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-8i-dRw">
+                                <rect key="frame" x="131.5" y="743.5" width="151.5" height="32.5"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Вернуться назад">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqr-Ws-pde" userLabel="Best Tracks Label">
+                                <rect key="frame" x="36" y="115" width="186.5" height="35"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Лучшие треки">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="29"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ux8-d2-V35" userLabel="searchView">
+                                <rect key="frame" x="36" y="207" width="342" height="28"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search-interface-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="upG-Kz-9uL">
+                                        <rect key="frame" x="0.0" y="4" width="11" height="11"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="11" id="YJh-jH-uRr"/>
+                                            <constraint firstAttribute="width" constant="11" id="oxm-eK-KEs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM2-Hv-pic" userLabel="divider">
+                                        <rect key="frame" x="0.0" y="27" width="342" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="qjB-Dd-vKe"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Кого ищем?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cx-GR-USG">
+                                        <rect key="frame" x="20" y="0.0" width="322" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="dYC-4A-caU"/>
+                                        </constraints>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lM2-Hv-pic" secondAttribute="trailing" id="519-he-utp"/>
+                                    <constraint firstItem="5cx-GR-USG" firstAttribute="leading" secondItem="upG-Kz-9uL" secondAttribute="trailing" constant="9" id="MZn-Fs-bj7"/>
+                                    <constraint firstAttribute="trailing" secondItem="5cx-GR-USG" secondAttribute="trailing" id="Ogg-gV-Ziv"/>
+                                    <constraint firstItem="5cx-GR-USG" firstAttribute="top" secondItem="Ux8-d2-V35" secondAttribute="top" id="PZA-a0-5UT"/>
+                                    <constraint firstItem="upG-Kz-9uL" firstAttribute="leading" secondItem="Ux8-d2-V35" secondAttribute="leading" id="Qf2-ON-CAw"/>
+                                    <constraint firstAttribute="height" constant="28" id="Ukh-4I-Qn8"/>
+                                    <constraint firstAttribute="bottom" secondItem="lM2-Hv-pic" secondAttribute="bottom" id="YQH-FK-bsS"/>
+                                    <constraint firstItem="upG-Kz-9uL" firstAttribute="top" secondItem="Ux8-d2-V35" secondAttribute="top" constant="4" id="doj-pv-Irm"/>
+                                    <constraint firstItem="lM2-Hv-pic" firstAttribute="leading" secondItem="Ux8-d2-V35" secondAttribute="leading" id="oBx-ZO-Zr0"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baJ-Og-EK9">
+                                <rect key="frame" x="102" y="260" width="210" height="55"/>
+                                <color key="backgroundColor" red="0.9178832173" green="0.76695114369999995" blue="0.9057839513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="WgQ-hz-Xij"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Искать">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9e-Z5-kTk">
+                                <rect key="frame" x="36" y="371" width="342" height="310"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UuB-Sm-XWL">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="cCB-zH-qPS"/>
+                                            <constraint firstAttribute="height" constant="80" id="q5Q-og-Pag"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ApC-Dy-Hs3">
+                                        <rect key="frame" x="0.0" y="115" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.76695114369999995" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="b5h-fb-jGv"/>
+                                            <constraint firstAttribute="height" constant="80" id="oEh-CC-1sZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-pJ-AvU">
+                                        <rect key="frame" x="0.0" y="230" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ApB-67-7la"/>
+                                            <constraint firstAttribute="width" constant="80" id="G3a-ED-FSD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gf9-3B-SHk">
+                                        <rect key="frame" x="104" y="0.0" width="238" height="87"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="87" id="cWE-Wb-pC0"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Track 1">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.58823537829999994" green="0.58823531870000001" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="19" name="Helvetica-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TXT-hh-o4b">
+                                        <rect key="frame" x="104" y="115" width="238" height="87"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="87" id="h3U-Eb-ZND"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Track 2">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.58823537829999994" green="0.58823531870000001" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="19" name="Helvetica-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-eE-Sr9">
+                                        <rect key="frame" x="104" y="230" width="238" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Track 3">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.58823537829999994" green="0.58823531870000001" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="19" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ApC-Dy-Hs3" firstAttribute="leading" secondItem="Z9e-Z5-kTk" secondAttribute="leading" id="423-KB-Wle"/>
+                                    <constraint firstAttribute="bottom" secondItem="z5D-pJ-AvU" secondAttribute="bottom" id="6VN-t8-BUR"/>
+                                    <constraint firstItem="gf9-3B-SHk" firstAttribute="leading" secondItem="UuB-Sm-XWL" secondAttribute="trailing" constant="24" id="GgA-NL-u2C"/>
+                                    <constraint firstItem="UuB-Sm-XWL" firstAttribute="top" secondItem="Z9e-Z5-kTk" secondAttribute="top" id="KOL-VI-xzC"/>
+                                    <constraint firstItem="2Mz-eE-Sr9" firstAttribute="leading" secondItem="z5D-pJ-AvU" secondAttribute="trailing" constant="24" id="WVf-jY-TLE"/>
+                                    <constraint firstItem="UuB-Sm-XWL" firstAttribute="leading" secondItem="Z9e-Z5-kTk" secondAttribute="leading" id="ZQA-wj-cIV"/>
+                                    <constraint firstItem="z5D-pJ-AvU" firstAttribute="leading" secondItem="Z9e-Z5-kTk" secondAttribute="leading" id="ZYo-qZ-lKj"/>
+                                    <constraint firstAttribute="trailing" secondItem="TXT-hh-o4b" secondAttribute="trailing" id="cM0-AU-vd9"/>
+                                    <constraint firstItem="ApC-Dy-Hs3" firstAttribute="top" secondItem="UuB-Sm-XWL" secondAttribute="bottom" constant="35" id="e1z-gY-6o5"/>
+                                    <constraint firstItem="gf9-3B-SHk" firstAttribute="top" secondItem="Z9e-Z5-kTk" secondAttribute="top" id="ec5-Ws-vE7"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Mz-eE-Sr9" secondAttribute="trailing" id="fgV-np-iQI"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Mz-eE-Sr9" secondAttribute="bottom" id="i8X-ou-isw"/>
+                                    <constraint firstAttribute="trailing" secondItem="gf9-3B-SHk" secondAttribute="trailing" id="j5A-dJ-eKY"/>
+                                    <constraint firstItem="TXT-hh-o4b" firstAttribute="leading" secondItem="ApC-Dy-Hs3" secondAttribute="trailing" constant="24" id="naK-Vq-pYa"/>
+                                    <constraint firstItem="TXT-hh-o4b" firstAttribute="top" secondItem="gf9-3B-SHk" secondAttribute="bottom" constant="28" id="q3M-cy-GgP"/>
+                                    <constraint firstAttribute="height" constant="310" id="qxQ-mS-uS5"/>
+                                    <constraint firstItem="2Mz-eE-Sr9" firstAttribute="top" secondItem="TXT-hh-o4b" secondAttribute="bottom" constant="28" id="uce-JM-NQL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YSB-0O-qCv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YSB-0O-qCv" firstAttribute="bottom" secondItem="MrJ-8i-dRw" secondAttribute="bottom" constant="86" id="18v-rK-aPk"/>
+                            <constraint firstItem="Ux8-d2-V35" firstAttribute="leading" secondItem="YSB-0O-qCv" secondAttribute="leading" constant="36" id="4pH-CN-Gui"/>
+                            <constraint firstItem="mqr-Ws-pde" firstAttribute="leading" secondItem="YSB-0O-qCv" secondAttribute="leading" constant="36" id="Hj4-hW-2XB"/>
+                            <constraint firstItem="baJ-Og-EK9" firstAttribute="leading" secondItem="YSB-0O-qCv" secondAttribute="leading" constant="102" id="Kmx-ZH-lZv"/>
+                            <constraint firstItem="mqr-Ws-pde" firstAttribute="top" secondItem="YSB-0O-qCv" secondAttribute="top" constant="71" id="Me9-EA-ebB"/>
+                            <constraint firstItem="YSB-0O-qCv" firstAttribute="trailing" secondItem="Z9e-Z5-kTk" secondAttribute="trailing" constant="36" id="MzF-9Q-Zby"/>
+                            <constraint firstItem="MrJ-8i-dRw" firstAttribute="centerX" secondItem="YSB-0O-qCv" secondAttribute="centerX" id="Twn-Xg-mD9"/>
+                            <constraint firstItem="Ux8-d2-V35" firstAttribute="top" secondItem="mqr-Ws-pde" secondAttribute="bottom" constant="57" id="f9k-sq-N8X"/>
+                            <constraint firstItem="baJ-Og-EK9" firstAttribute="top" secondItem="Ux8-d2-V35" secondAttribute="bottom" constant="25" id="jAJ-it-rys"/>
+                            <constraint firstItem="YSB-0O-qCv" firstAttribute="trailing" secondItem="Ux8-d2-V35" secondAttribute="trailing" constant="36" id="k4t-hs-rf6"/>
+                            <constraint firstItem="Z9e-Z5-kTk" firstAttribute="leading" secondItem="YSB-0O-qCv" secondAttribute="leading" constant="36" id="kJP-pc-V6S"/>
+                            <constraint firstItem="YSB-0O-qCv" firstAttribute="trailing" secondItem="baJ-Og-EK9" secondAttribute="trailing" constant="102" id="m39-zz-Fjm"/>
+                            <constraint firstItem="Z9e-Z5-kTk" firstAttribute="top" secondItem="baJ-Og-EK9" secondAttribute="bottom" constant="56" id="zAq-lg-kc3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NWS-bZ-ksB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xD-Di-aDz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="504"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="qmk-Se-Yae">
+            <size key="intrinsicContentSize" width="173.5" height="32.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="picture" width="360" height="355"/>
+        <image name="search-interface-symbol" width="11" height="11"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

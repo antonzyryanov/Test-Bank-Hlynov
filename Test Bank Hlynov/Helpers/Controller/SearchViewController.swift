@@ -41,6 +41,16 @@ class SearchViewController<T: SearchView, S: ResponseView>: UIViewController, UI
     }
 
     func performRequest(onCompletion: @escaping () -> Void) {}
+    
+    func presentAlert(onCompletion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            onCompletion()
+            let alert = UIAlertController(title: "Artist not found", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 
     @objc func dismissKeyboard() {
         view.endEditing(true)

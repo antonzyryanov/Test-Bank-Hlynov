@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C565A2C27E6703B00EC43A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C565A2B27E6703A00EC43A0 /* Main.storyboard */; };
+		4C565A2E27E686FB00EC43A0 /* TextsLinksFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C565A2D27E686FB00EC43A0 /* TextsLinksFormatter.swift */; };
+		4C565A3027E68E6E00EC43A0 /* StoryboardGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C565A2F27E68E6E00EC43A0 /* StoryboardGradientButton.swift */; };
+		4C565A3227E6AC1600EC43A0 /* ArtistNameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C565A3127E6AC1600EC43A0 /* ArtistNameFormatter.swift */; };
 		4C64174E27E0A23700B8D1EE /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C64174D27E0A23700B8D1EE /* MainScreenView.swift */; };
 		4C64175127E0A3D800B8D1EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4C64175027E0A3D800B8D1EE /* SnapKit */; };
 		4C64175427E0AA2E00B8D1EE /* BiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C64175327E0AA2E00B8D1EE /* BiographyView.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C565A2B27E6703A00EC43A0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C565A2D27E686FB00EC43A0 /* TextsLinksFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsLinksFormatter.swift; sourceTree = "<group>"; };
+		4C565A2F27E68E6E00EC43A0 /* StoryboardGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardGradientButton.swift; sourceTree = "<group>"; };
+		4C565A3127E6AC1600EC43A0 /* ArtistNameFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistNameFormatter.swift; sourceTree = "<group>"; };
 		4C64174D27E0A23700B8D1EE /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		4C64175327E0AA2E00B8D1EE /* BiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyView.swift; sourceTree = "<group>"; };
 		4C64175527E0AAFE00B8D1EE /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 				4C64176127E0B68300B8D1EE /* SearchView.swift */,
 				4C64176527E0B91D00B8D1EE /* SearchViewElements */,
 				4C64177027E121C800B8D1EE /* GradientButton.swift */,
+				4C565A2F27E68E6E00EC43A0 /* StoryboardGradientButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,8 +220,11 @@
 				4C64175727E0AC1C00B8D1EE /* View */,
 				4C7AD7F127E34F5D003F291B /* Controller */,
 				4CDECEB627E1F0D400AC9A81 /* NetworkManager.swift */,
+				4C565A2D27E686FB00EC43A0 /* TextsLinksFormatter.swift */,
+				4C565A3127E6AC1600EC43A0 /* ArtistNameFormatter.swift */,
 				4C81CF1F27DFA429007E7931 /* AppDelegate.swift */,
 				4C81CF2827DFA42F007E7931 /* Assets.xcassets */,
+				4C565A2B27E6703A00EC43A0 /* Main.storyboard */,
 				4C81CF2A27DFA42F007E7931 /* LaunchScreen.storyboard */,
 				4C7AD7FA27E380E7003F291B /* Localization */,
 				4C81CF3927DFAB52007E7931 /* Additional Fonts */,
@@ -289,7 +301,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C81CF3027DFA42F007E7931 /* Build configuration list for PBXNativeTarget "Test Bank Hlynov" */;
 			buildPhases = (
-				4C7AD7F427E371AC003F291B /* SwiftFormat */,
 				4C81CF1827DFA429007E7931 /* Sources */,
 				4C81CF1927DFA429007E7931 /* Frameworks */,
 				4C81CF1A27DFA429007E7931 /* Resources */,
@@ -347,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C565A2C27E6703B00EC43A0 /* Main.storyboard in Resources */,
 				4C81CF2C27DFA42F007E7931 /* LaunchScreen.storyboard in Resources */,
 				4C7AD7F727E37F94003F291B /* Localizable.strings in Resources */,
 				4C81CF2927DFA42F007E7931 /* Assets.xcassets in Resources */,
@@ -358,27 +370,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4C7AD7F427E371AC003F291B /* SwiftFormat */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftFormat;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/scripts/swiftformat.sh\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		4C81CF1827DFA429007E7931 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -386,6 +377,7 @@
 			files = (
 				4CDECEB727E1F0D400AC9A81 /* NetworkManager.swift in Sources */,
 				4CDECEC727E26CEF00AC9A81 /* Track.swift in Sources */,
+				4C565A3227E6AC1600EC43A0 /* ArtistNameFormatter.swift in Sources */,
 				4C64175927E0AD7700B8D1EE /* InfoView.swift in Sources */,
 				4C64176B27E0D39400B8D1EE /* UIControlExtensions.swift in Sources */,
 				4C64176D27E0E4FE00B8D1EE /* UILabelExtensions.swift in Sources */,
@@ -401,11 +393,13 @@
 				4C64176F27E0F45600B8D1EE /* TrackView.swift in Sources */,
 				4CDECEBA27E20EE800AC9A81 /* Artist.swift in Sources */,
 				4CDECEC427E2611900AC9A81 /* UITextViewExtensions.swift in Sources */,
+				4C565A2E27E686FB00EC43A0 /* TextsLinksFormatter.swift in Sources */,
 				4C81CF4027DFE05C007E7931 /* BiographyViewController.swift in Sources */,
 				4C81CF4527DFF9E4007E7931 /* BestTracksViewController.swift in Sources */,
 				4C64176827E0BAED00B8D1EE /* AppRouter.swift in Sources */,
 				4CDECEC227E260B600AC9A81 /* StringExtesions.swift in Sources */,
 				4C81CF2027DFA429007E7931 /* AppDelegate.swift in Sources */,
+				4C565A3027E68E6E00EC43A0 /* StoryboardGradientButton.swift in Sources */,
 				4C64175C27E0AF8B00B8D1EE /* ArtistTracksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
